@@ -22,11 +22,18 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    const dancer = dancerMakerFunction(
+    // const dancer = dancerMakerFunction(
+    //   $('body').height() * Math.random(),
+    //   $('body').width() * Math.random(),
+    //   Math.random() * 1000
+    // );
+    const dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+    // push dancers into window.dancer array
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 });
