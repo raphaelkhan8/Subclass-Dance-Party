@@ -15,7 +15,7 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
-    const dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    let dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
     const dancerMakerFunction = window[dancerMakerFunctionName];
@@ -32,7 +32,6 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
-    // push dancers into window.dancer array
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
