@@ -27,7 +27,7 @@ body, a:link, a:visited, a:active {
 }
 
 .dancer {
-  border: 10px solid red;
+  border: 10px solid rgb(4, 0, 255);
   border-radius: 10px;
   position: absolute;
 }
