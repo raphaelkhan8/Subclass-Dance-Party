@@ -1,5 +1,5 @@
-const makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  const blinkyDancer = makeDancer(top, left, timeBetweenSteps);
+const BlinkyDancer = function(top, left, timeBetweenSteps) {
+  const blinkyDancer = new Dancer(top, left, timeBetweenSteps);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
@@ -18,4 +18,4 @@ const makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   return blinkyDancer;
 };
 
-window.makeBlinkyDancer = makeBlinkyDancer;
+window.BlinkyDancer = BlinkyDancer;
