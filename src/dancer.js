@@ -41,15 +41,15 @@ const Dancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
-  this.step();
   this.setPosition(top, left);
+  this.step();
 }
 
 
   Dancer.prototype.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    setTimeout(this.step, this.timeBetweenSteps);
+    setTimeout(() => this.step(this), this.timeBetweenSteps);
   };
 
   Dancer.prototype.setPosition = function(top, left) {
