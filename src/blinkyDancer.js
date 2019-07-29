@@ -37,7 +37,8 @@ const BlinkyDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<span class="blinkyDancer"></span>');
+  this.$node.addClass('blinkyDancer');
+  // this.$node = $('<span class="blinkyDancer"></span>');
 }
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
