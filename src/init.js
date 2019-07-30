@@ -20,20 +20,42 @@ $(document).ready(function() {
     // get the maker function for the kind of dancer we're supposed to make
     const dancerMakerFunction = window[dancerMakerFunctionName];
 
-    // make a dancer with a random position
-
     // const dancer = dancerMakerFunction(
     //   $('body').height() * Math.random(),
     //   $('body').width() * Math.random(),
     //   Math.random() * 1000
     // );
+
+    // make a dancer with a random position
     const dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
-    window.dancers.push(dancer);
+
+    // Appends the dancer "span" element to the DOM
     $('body').append(dancer.$node);
+
+    // push each dancer to the global dancers (window.dancers) array
+    window.dancers.push(dancer);
   });
+
+  // Click handler that calls the lineUp method, which moves all dancers to the left
+  $(".lineUpButton").on("click", function (event) {
+    // Iterates through each dancer in the global "dancers" array
+    window.dancers.forEach(function (dancer) {
+      // Calls the lineUp method for each dancer
+      dancer.lineUp();
+    });
+  });
+
+  // Click handler that callsl theh breakLine method, which resets dancer positions
+  $('.breakLineButton').on('click', function () {
+    window.dancers.forEach(function (dancer) {
+      // Calls the breakLine method for each dancer
+      dancer.breakLine();
+    });
+  });
+  
 });
 
