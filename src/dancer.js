@@ -5,7 +5,6 @@ const Dancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
-  this.timer;
   this.step();
   this.setPosition(top, left);
 }
@@ -14,7 +13,7 @@ const Dancer = function(top, left, timeBetweenSteps) {
   Dancer.prototype.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    this.timer = setTimeout(this.step.bind(this), this.timeBetweenSteps);
+    setTimeout(() => this.step.call(this), this.timeBetweenSteps);
   };
 
   Dancer.prototype.setPosition = function(top, left) {
