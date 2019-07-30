@@ -41,7 +41,7 @@ $(document).ready(function() {
   });
 
   // Click handler that calls the lineUp method, which moves all dancers to the left
-  $(".lineUpButton").on("click", function(event) {
+  $(".lineUpButton").on("click", function() {
     // Iterates through each dancer in the global "dancers" array
     window.dancers.forEach(function(dancer) {
       // Calls the lineUp method for each dancer

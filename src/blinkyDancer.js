@@ -14,7 +14,9 @@ const BlinkyDancer = function(top, left, timeBetweenSteps) {
   // Call the Dancer step method, which repeatedly calls the step method
   BlinkyDancer.prototype.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
-    Dancer.prototype.step.call(this);
+    const BlinkyDancer = this;
+    const oldStep = Dancer.prototype.step;
+    oldStep.call(BlinkyDancer);
     // Makes BlinkyDancer "blink" on and off
     this.$node.toggle();
   };
