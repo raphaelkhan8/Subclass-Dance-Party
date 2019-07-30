@@ -8,7 +8,7 @@ const Dancer = function(top, left, timeBetweenSteps) {
   this.step();
   this.setPosition(top, left);
 };
-
+//change
 Dancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
