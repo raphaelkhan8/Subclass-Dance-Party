@@ -5,6 +5,7 @@ const Dancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
+  this.timer;
   this.step();
   this.setPosition(top, left);
 }
@@ -13,7 +14,7 @@ const Dancer = function(top, left, timeBetweenSteps) {
   Dancer.prototype.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    setTimeout(this.step.bind(this), this.timeBetweenSteps);
+    this.timer = setTimeout(this.step.bind(this), this.timeBetweenSteps);
   };
 
   Dancer.prototype.setPosition = function(top, left) {
@@ -27,7 +28,7 @@ const Dancer = function(top, left, timeBetweenSteps) {
     this.$node.css(styleSettings);
   };
 
-Dancer.prototype.lineUp = function () {
+Dancer.prototype.lineUp = function() {
   var styleSettings = {
     left: 0,
   };
@@ -35,7 +36,7 @@ Dancer.prototype.lineUp = function () {
 };
 
 // Moves all dancers to a new random position
-Dancer.prototype.breakLine = function () {
+Dancer.prototype.breakLine = function() {
   // Call setPosition with random X and Y coordinates
   this.setPosition($('body').height() * Math.random(), $('body').width() * Math.random());
 };
