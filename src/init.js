@@ -26,19 +26,21 @@ $(document).ready(function() {
     //   Math.random() * 1000
     // );
 
-//     // make a dancer with a random position
-//     const dancer = new DancerMakerFunction(
-//       $('body').height() * Math.random(),
-//       $('body').width() * Math.random(),
-//       Math.random() * 750
-//     );
+    // make a dancer with a random position
+    const dancer = new DancerMakerFunction(
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 750
+    );
 
-//     // append the dancer "span" element to the DOM
-//     $('body').append(dancer.$node);
+    // append the dancer "span" element to the DOM
+    $('body').append(dancer.$node);
 
-//     // push each dancer to the global dancers (window.dancers) array
-//     window.dancers.push(dancer);
-//   });
+    // push each dancer to the global dancers (window.dancers) array
+    window.dancers.push(dancer);
+  });
+
+});
 
 //   // Click handler that calls the lineUp method, which moves all dancers to the left
 //   $(".lineUpButton").on("click", function() {
