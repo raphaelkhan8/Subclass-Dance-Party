@@ -4,6 +4,7 @@ body, html {
 
 body{
   margin: 0px;
+  background-image: url('https://i.pinimg.com/originals/76/04/ac/7604ac29c3a5aa366a78fd550625c27a.jpg'); 
   background-color: #444;
   font-size: 18px;
 }
