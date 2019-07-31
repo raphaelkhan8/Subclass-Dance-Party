@@ -2,6 +2,7 @@ const CatDancer = function (top, left, timeBetweenSteps) {
   // call the Dancer constructor when CatDancer is invoked
   Dancer.call(this, top, left, timeBetweenSteps);
   // append the cat image to each CatDancer
+  this.$node.addClass('catdancer');
   this.$node.append('<img src = "https://i.ibb.co/fMPNgfm/rsz-oreo-belly.jpg" alt="fail">');
 };
 

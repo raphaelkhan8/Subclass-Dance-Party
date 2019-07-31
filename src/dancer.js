@@ -28,12 +28,12 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-// Dancer.prototype.lineUp = function() {
-//   var styleSettings = {
-//     left: 0,
-//   };
-//   this.$node.css(styleSettings);
-// };
+Dancer.prototype.lineUp = function() {
+  var styleSettings = {
+    left: 0,
+  };
+  this.$node.css(styleSettings);
+};
 
 // // Moves all dancers to a new random position
 // Dancer.prototype.breakLine = function() {
@@ -46,4 +46,4 @@ Dancer.prototype.setPosition = function(top, left) {
 //   // this one sets the position to some random default point within the body
 //   // dancer.setPosition(top, left);
 
-// window.Dancer = Dancer;
+window.Dancer = Dancer;

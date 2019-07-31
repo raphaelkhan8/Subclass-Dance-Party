@@ -1,5 +1,6 @@
 const JimmyDancer = function (top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('jimmy-dancer');
   this.$node.append('<img src = "https://thumbs.gfycat.com/CompleteGrippingHalicore-max-1mb.gif" alt="fail">');
 };
 

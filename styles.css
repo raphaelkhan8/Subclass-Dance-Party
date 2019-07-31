@@ -4,7 +4,7 @@ body, html {
 
 body{
   margin: 0px;
-  background-image: url('https://i.pinimg.com/originals/76/04/ac/7604ac29c3a5aa366a78fd550625c27a.jpg'); 
+  background-image: url('https://i.ytimg.com/vi/nUIu_fDi3YQ/maxresdefault.jpg'); 
   background-color: #444;
   font-size: 18px;
 }
@@ -27,8 +27,75 @@ body, a:link, a:visited, a:active {
   background-color: #777;
 }
 
-.dancer {
-  border: 10px solid rgb(4, 0, 255);
-  border-radius: 10px;
+#dude {
+  max-width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+
+#walter {
+  margin: auto;
+
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+
+  position: absolute;
+  left: 0;
+  display: block;
+    top: 0;
+  
+  x-transition: all 1s ease-in-out;
+  animation: ani 1.7s infinite;
+}
+
+@keyframes ani {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 720px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+#blinky-dancer {
+  /* border: 20px solid rgb(255, 0, 0);
+  border-radius: 20px; */
   position: absolute;
 }
+
+.jimmy-dancer {
+  /* border: 20px solid rgb(0, 17, 255);
+  border-radius: 5px; */
+  position: absolute;
+}
+
+.catdancer {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+

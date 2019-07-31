@@ -1,6 +1,10 @@
 const BlinkyDancer = function(top, left, timeBetweenSteps) {
   // import Dancer to make BlinkyDancer an instance of the Dancer supe constructor
   Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('blinkyDancer');
+  this.$node.attr('id', 'blinky-dancer');
+  this.$node.append('<img src = "src/images/joint.png" alt="fail">');
+
   // this.$node.addClass('blinkyDancer');
 };
 
